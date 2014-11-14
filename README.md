@@ -1,4 +1,6 @@
-ivy-pdi-git-steps
+Ivy PDI Git Steps
 =================
 
-Pentaho data integration plugin for repositories git
+Pentaho Data Integration plugin for Git repositories
+
+

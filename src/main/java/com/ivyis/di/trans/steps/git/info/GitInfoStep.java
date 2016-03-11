@@ -126,10 +126,9 @@ public class GitInfoStep extends BaseStep implements StepInterface {
       }
       if (meta.getGitRepoFolderPath() != null) {
         try {
-          data.gitRepoFolderPath = new File(
-              KettleVFS.getFilename(KettleVFS
-                  .getFileObject(environmentSubstitute(meta
-                      .getGitRepoFolderPath()))));
+          data.gitRepoFolderPath =
+              new File(KettleVFS.getFilename(KettleVFS.getFileObject(environmentSubstitute(meta
+                  .getGitRepoFolderPath()))));
         } catch (KettleFileException e) {
           logError(e.getMessage(), e);
         }

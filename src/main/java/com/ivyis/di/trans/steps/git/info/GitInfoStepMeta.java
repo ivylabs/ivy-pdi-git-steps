@@ -108,9 +108,11 @@ public class GitInfoStepMeta extends BaseStepMeta implements StepMetaInterface {
             .addTagValue("gitRepoFolderPath", gitRepoFolderPath));
 
     retval.append("    <gitCommands>").append(Const.CR);
-    retval.append("        <gitCommand>").append(Const.CR);
-    retval.append("          ").append(gitCommand.getXML());
-    retval.append("        </gitCommand>").append(Const.CR);
+    if (gitCommand != null) {
+      retval.append("        <gitCommand>").append(Const.CR);
+      retval.append("          ").append(gitCommand.getXML());
+      retval.append("        </gitCommand>").append(Const.CR);
+    }
     retval.append("    </gitCommands>").append(Const.CR);
 
     return retval.toString();
